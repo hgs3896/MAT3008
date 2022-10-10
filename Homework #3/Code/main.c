@@ -273,21 +273,24 @@ void ex1_2(int m, int n, NonModifiableMatrix a, NonModifiableVector b){
 
 void ex1_3(int m, int n, NonModifiableMatrix a, NonModifiableVector b){
     int j,k,l;
-	float **aa,*w,**u,**v;
+	float **aa,*w,**u,**v,*bb;
 
     aa=matrix(1,NP,1,MP);
     w=vector(1,NP);
+    bb=vector(1,MP);
 	u=matrix(1,NP,1,MP);
 	v=matrix(1,NP,1,NP);
 
     printf("Using Singular Value Decomposition\n");
 
     /* copy original matrix into u */
-    for (k=1;k<=m;k++)
+    for (k=1;k<=m;k++){
+        bb[k] = b[k];
         for (l=1;l<=n;l++) {
             aa[k][l]=a[k][l];
             u[k][l]=a[k][l];
         }
+    }
 
     /* perform decomposition */
     svdcmp(u,m,m,w,v);
@@ -339,22 +342,26 @@ void ex1_3(int m, int n, NonModifiableMatrix a, NonModifiableVector b){
 
     printf("Solution vector for the equations:\n");
     for (k=1;k<=n;k++) {
+        const float w_inv = (fabs(w[k]) >= 0.5e-6 ? 1.0 / w[k] : 0.0);
+        bb[k] = 0.0;
+        for(j=1;j<=m;j++)
+            bb[k] += u[j][k] * b[j];
+        bb[k] *= w_inv;
+    }
+    for (k=1;k<=n;++k){
         float ans = 0.0;
-        for (j=1;j<=n;j++){
-            float local_ans = 0.0;
-            const float w_inv = (fabs(w[j]) > 1e-9 ? 1.0 / w[j] : 0.0);
-            for (l=1;l<=m;l++)
-                local_ans += v[k][j] * u[l][j] * b[l];
-            ans += local_ans * w_inv;
-        }
+        for (j=1;j<=n;++j)
+            ans += v[k][j] * bb[j];
         printf("%12.6f", ans);
     }
+
     printf("\n");
 
     printf("**********************************************************************\n");
 
     free_matrix(aa, 1, NP, 1, MP);
     free_vector(w, 1, NP);
+    free_vector(bb, 1, MP);
     free_matrix(u, 1, NP, 1, MP);
     free_matrix(v, 1, NP, 1, NP);
 }
