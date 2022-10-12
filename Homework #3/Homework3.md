@@ -13,10 +13,12 @@
 ### 1-2. Using LU Decomposition(`ludcmp()`)
 
 - [    1.000000,   -3.000000,    2.000000,    0.000000]
+- In fact, the result should not be calculated, but the tiny epsilon value used in NR library does not stop the division by zero.
 
 ### 1-3. Using Singular Value Decomposition(`svdcmp()`)
 
 - [    1.733333,   -1.533334,   -0.200000,   -0.733334]
+- The result of singular value decomposition about any singular matrix can be interpreted as a solution of least square method, which is located to the minimum distance.
 
 ## For A_2 and b_2(**lineq2.dat**), the solutuons for each method are
 
@@ -32,6 +34,8 @@
 
 - [   -2.873566,   -0.612357,    0.976278,    0.635819,   -0.553441]
 
+All results are same, because it's non-singular.
+
 ## For A_3 and b_3(**lineq3.dat**), the solutuons for each method are
 
 ### 1-1. Using Gauss-Jordan Elimination(`gaussj()`)
@@ -46,13 +50,19 @@
 
 - [   -0.326609,    1.532292,   -1.044825,   -1.587447,    2.928479,   -2.218929]
 
+All results are same, because it's non-singular.
+
+
+
 ## Discuss empirically the advantage/disadvantage of each method
 
 |            Method            |                          Advantage                           |                         Disadvantage                         |
 | :--------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
-|   Gauss-Jordan Elimination   |                Good for obtaining an inverse                 | Computations are heavy O(n^3). Cannot be used for singular one |
-|       LU Decomposition       | Good for getting a solution and a determinant, Able to know whether a matrix is ill-conditioned |   Substitution is needed. Cannot be used for singular one    |
-| Singular Value Decomposition | Can also be used for singular one. Can be applied to over-/under-determined. |  When the dimensions are large, calculation costs are heavy  |
+|   Gauss-Jordan Elimination   |                Good for obtaining an inverse                 | Computations are heavy O(n^3).<br />Cannot be used for singular one |
+|       LU Decomposition       | Good for getting a solution and a determinant.<br />Able to know whether a matrix is ill-conditioned or not | Substitution is needed.<br />Cannot be used for singular one |
+| Singular Value Decomposition | Can also be used for singular one.<br />Can be applied to over-/under-determined. |  When the dimensions are large, calculation costs are heavy  |
+
+
 
 # 2. Apply the method of iterative improvement(`mprove()`) to the above problem and discuss the results
 
@@ -87,6 +97,10 @@
   $$
 
 - Determinant: -0.000000
+
+- Since the determinant is 0, the matrix are singular.
+
+- Which means its inverse must be very large or incomputable by the division by zero, because **some pivot chosen for Gauss-Jordan Elimination should be elinimated to a closed-zero value**, which incurs <u>explosion of inverses</u>.
 
 ## For A_2(**lineq2.dat**), the inverse of A_2 and determinant of A_2 are
 
