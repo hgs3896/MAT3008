@@ -10,7 +10,7 @@ Sample의 개수가 적을 때에는 히스토그램상 sample의 분포가 원 
 
 ### A - 1. Histogram of Uniform Distribution in [-3, 2] with 100 samples
 
-![Histogram of Uniform Distribution with 100 samples](uniform_100.png)
+![Histogram of Uniform Distribution with 100 samples](./uniform_100.png)
 
 |Range|1|2|3|4|5|6|7|8|9|10|
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
@@ -27,7 +27,7 @@ Sample의 개수가 적을 때에는 히스토그램상 sample의 분포가 원 
 
 ### A - 2. Histogram of Uniform Distribution in [-3, 2] with 1000 samples
 
-![Histogram of Uniform Distribution with 1000 samples](uniform_1000.png)
+![Histogram of Uniform Distribution with 1000 samples](./uniform_1000.png)
 
 |Range|1|2|3|4|5|6|7|8|9|10|
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
@@ -44,7 +44,7 @@ Sample의 개수가 적을 때에는 히스토그램상 sample의 분포가 원 
 
 ### A - 3. Histogram of Uniform Distribution in [-3, 2] with 10000 samples
 
-![Histogram of Uniform Distribution with 10000 samples](uniform_10000.png)
+![Histogram of Uniform Distribution with 10000 samples](./uniform_10000.png)
 
 |Range|1|2|3|4|5|6|7|8|9|10|
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
@@ -61,7 +61,7 @@ Sample의 개수가 적을 때에는 히스토그램상 sample의 분포가 원 
 
 ### A - 4. Histogram of Uniform Distribution in [-3, 2] with 100000 samples
 
-![Histogram of Uniform Distribution with 100000 samples](uniform_100000.png)
+![Histogram of Uniform Distribution with 100000 samples](./uniform_100000.png)
 
 |Range|1|2|3|4|5|6|7|8|9|10|
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
@@ -80,7 +80,7 @@ Sample의 개수가 적을 때에는 히스토그램상 sample의 분포가 원 
 
 ### B - 1. Histogram of Gaussian Distribution with m = 0.5, standard s = 1.5 with 100 samples
 
-![Histogram of Gaussian Distribution with 100 samples](gauss_100.png)
+![Histogram of Gaussian Distribution with 100 samples](./gauss_100.png)
 
 |Range|1|2|3|4|5|6|7|8|9|10|
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
@@ -97,7 +97,7 @@ Sample의 개수가 적을 때에는 히스토그램상 sample의 분포가 원 
 
 ### B - 2. Histogram of Gaussian Distribution with m = 0.5, standard s = 1.5 with 1000 samples
 
-![Histogram of Gaussian Distribution with 1000 samples](gauss_1000.png)
+![Histogram of Gaussian Distribution with 1000 samples](./gauss_1000.png)
 
 |Range|1|2|3|4|5|6|7|8|9|10|
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
@@ -114,7 +114,7 @@ Sample의 개수가 적을 때에는 히스토그램상 sample의 분포가 원 
 
 ### B - 3. Histogram of Gaussian Distribution with m = 0.5, standard s = 1.5 with 10000 samples
 
-![Histogram of Gaussian Distribution with 10000 samples](gauss_10000.png)
+![Histogram of Gaussian Distribution with 10000 samples](./gauss_10000.png)
 
 |Range|1|2|3|4|5|6|7|8|9|10|
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
@@ -131,7 +131,7 @@ Sample의 개수가 적을 때에는 히스토그램상 sample의 분포가 원 
 
 ### B - 4. Histogram of Gaussian Distribution with m = 0.5, standard s = 1.5 with 100000 samples
 
-![Histogram of Gaussian Distribution with 100000 samples](gauss_100000.png)
+![Histogram of Gaussian Distribution with 100000 samples](./gauss_100000.png)
 
 |Range|1|2|3|4|5|6|7|8|9|10|
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
