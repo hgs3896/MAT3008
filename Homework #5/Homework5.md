@@ -8,7 +8,7 @@ Upscale the image up to **3x** size
 
 | Original                                                     |                           Upscaled                           |
 | ------------------------------------------------------------ | :----------------------------------------------------------: |
-| <img src="/Users/hgs/github/2022_mat3008_2017030473/Homework #5/sample.jpg" style="zoom:25%;" /> | <img src="/Users/hgs/github/2022_mat3008_2017030473/Homework #5/upscaled_sample.webp" style="zoom: 25%;" /> |
+| <img src="sample.jpg" style="zoom:25%;" /> | <img src="upscaled_sample.webp" style="zoom: 25%;" /> |
 
 
 
